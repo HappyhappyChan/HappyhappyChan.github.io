@@ -20,11 +20,12 @@
         $('.justified-gallery').justifiedGallery();
     }
 
-    if (typeof moment === 'function') {
-        $('.article-meta time').each(function() {
-            $(this).text(moment($(this).attr('datetime')).fromNow());
-        });
-    }
+    // 时间直接使用日期
+    // if (typeof moment === 'function') {
+    //     $('.article-meta time').each(function() {
+    //         $(this).text(moment($(this).attr('datetime')).fromNow());
+    //     });
+    // }
 
     $('.article > .content > table').each(function() {
         if ($(this).width() > $(this).parent().width()) {
@@ -120,6 +121,8 @@
 
     const $toc = $('#toc');
     if ($toc.length > 0) {
+        // 只针对目录开启粘性定位
+        // $toc.addClass('column-left is-sticky');
         const $mask = $('<div>');
         $mask.attr('id', 'toc-mask');
 
