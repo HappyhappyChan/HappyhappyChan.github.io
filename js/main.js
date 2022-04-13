@@ -122,7 +122,7 @@
     const $toc = $('#toc');
     if ($toc.length > 0) {
         // 只针对目录开启粘性定位
-        // $toc.addClass('column-left is-sticky');
+        $toc.addClass('column-left is-sticky');
         const $mask = $('<div>');
         $mask.attr('id', 'toc-mask');
 
